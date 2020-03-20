@@ -9,6 +9,7 @@
         margin-top: 100px;
         margin-left: auto;
         margin-right: auto;
+        transition: all 360ms ease;
       }
     </style>
   </head>
@@ -20,7 +21,7 @@
         window.doppler.init(function(bandwidth) {
           var threshold = 4;
           if (bandwidth.left > threshold || bandwidth.right > threshold) {
-            var scale    = 10;
+            var scale    = 100;
             var baseSize = 100;
             var diff = bandwidth.left - bandwidth.right;
             var dimension = (baseSize + scale*diff) + 'px';
